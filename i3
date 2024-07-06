@@ -3,6 +3,7 @@ font pango:monospace 8
 exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:win_space_toggle"
 default_border pixel 0
 bindsym $mod+p exec flameshot gui
+bindsym $mod+b exec systemctl start bluetooth.service
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
