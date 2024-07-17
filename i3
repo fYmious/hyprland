@@ -3,7 +3,7 @@ font pango:monospace 8
 exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:win_space_toggle"
 default_border pixel 0
 bindsym $mod+p exec flameshot gui
-bindsym $mod+b exec systemctl start bluetooth.service
+bindsym $mod+b exec Scripts/bluetooth.sh
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -14,7 +14,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 floating_modifier $mod
 tiling_drag modifier titlebar
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec qterminal
 bindsym $mod+q kill
 bindsym $mod+a exec rofi -show drun
 bindsym $mod+j focus left
