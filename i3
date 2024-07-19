@@ -15,6 +15,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 tiling_drag modifier titlebar
 bindsym $mod+Return exec qterminal
+bindsym $mod+c exec code
+bindsym $mod+f exec firefox-developer-edition
 bindsym $mod+q kill
 bindsym $mod+a exec rofi -show drun
 bindsym $mod+j focus left
@@ -35,7 +37,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
